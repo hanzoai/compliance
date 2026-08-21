@@ -34,7 +34,7 @@ control.
 |---|---|---|---|
 | Audit events | cloud audit store → ClickHouse; S3 cold tier | 1y hot / 6y cold | hot [implemented]; cold-tier lifecycle + WORM [target] |
 | Access & authn logs | IAM (`object/record.go`) + o11y stack | 1y | [implemented] |
-| Build & deploy provenance | hanzoai/ci runs, registry.hanzo.ai manifests, Git history | life of the artifact | [implemented] |
+| Build & deploy provenance | hanzoai/ci runs, oci.hanzo.ai manifests, Git history | life of the artifact | [implemented] |
 | Billing/metering | `Deps.Metering` store | 7y (tax) | [implemented] |
 | Customer content | per-tenant `DataDir` stores / Postgres | customer-controlled; delete on offboarding per contract | [implemented] |
 | Policies & compliance docs | this repo + hanzoai/security (Git) | permanent (versioned) | [implemented] |
